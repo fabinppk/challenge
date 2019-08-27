@@ -1,0 +1,49 @@
+.main-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-container .btn {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.main-container .btn.new {
+    background: #4fc3c9;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 25px;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+.main-container .btn.delete {
+    border: 0;
+    color: #0366d6;
+    text-decoration: underline;
+}
+
+.main-container .list-container {
+    min-width: 380px;
+    margin-top: 50px;
+}
+
+.main-container .list-container h2 {
+    background: #e8e8e8;
+    font-size: 20px;
+    font-weight: initial;
+    padding: 5px;
+    color: #8e8e8e;
+}
+
+.main-container .list-container ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 5px;
+    font-size: 20px;
+    color: #8e8e8e;
+    border-bottom: 1px solid #e8e8e8;
+}
