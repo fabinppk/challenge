@@ -14,3 +14,7 @@ input,
 button {
     font-family: Arial, Helvetica, sans-sans-serif;
 }
+
+.elementHover {
+    border: 1px solid red !important;
+}

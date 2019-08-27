@@ -20,6 +20,10 @@
     margin-top: 50px;
 }
 
+.main-container .btn.new:active {
+    background: #44a4a9;
+}
+
 .main-container .btn.delete {
     border: 0;
     color: #0366d6;
@@ -46,4 +50,12 @@
     font-size: 20px;
     color: #8e8e8e;
     border-bottom: 1px solid #e8e8e8;
+}
+
+.ball {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(255, 0, 0, 0.64);
+    position: fixed;
 }

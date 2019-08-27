@@ -1,17 +1,15 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import './App.css';
-import Main from './pages/Main';
-import Header from './pages/Header';
+import Content from './pages/Content';
 import store from './store';
 
-function App() {
+const App = () => {
     return (
         <Provider store={store}>
-            <Header />
-            <Main />
+            <Content />
         </Provider>
     );
-}
+};
 
 export default App;

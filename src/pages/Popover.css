@@ -5,19 +5,19 @@
     border-radius: 5px;
 }
 
-.Popover-body > div {
+.Popover-body form {
     display: flex;
     flex-direction: column;
 }
 
-.Popover-body > div input {
+.Popover-body form input {
     padding: 5px;
     margin: 5px;
     border: 1px solid #e8e8e8;
     color: #8e8e8e;
 }
 
-.Popover-body > div button {
+.Popover-body form button {
     cursor: pointer;
     background: #4fc3c9;
     color: white;

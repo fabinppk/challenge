@@ -15,7 +15,9 @@ class WrapperPopover extends Component {
     }
 
     togglePopover = () => {
-        const { togglePopover } = this.props;
+        const { togglePopover, dispatch } = this.props;
+        dispatch({ type: 'toggleClicked' });
+        document.querySelector('.elementHover').classList.remove('elementHover');
         togglePopover();
     };
 
@@ -25,8 +27,8 @@ class WrapperPopover extends Component {
 
     newHotspot = (title, message) => {
         const hotspot = {
-            coordx: 15,
-            coordy: 16,
+            coordx: this.props.x,
+            coordy: this.props.y,
             message,
             title
         };
@@ -53,26 +55,30 @@ class WrapperPopover extends Component {
         const { dispatch } = this.props;
         return (
             <div key="a">
-                <input
-                    name="inputTitleValue"
-                    onChange={e => this.handleInputChange(e)}
-                    type="text"
-                    value={inputTitleValue}
-                    placeholder="Type Title"
-                />
-                <input
-                    name="inputMessageValue"
-                    onChange={e => this.handleInputChange(e)}
-                    type="text"
-                    value={inputMessageValue}
-                    placeholder="Type Message"
-                />
-                <button
-                    onClick={() => dispatch(this.newHotspot(inputTitleValue, inputMessageValue))}
-                    type="button"
-                >
-                    Add
-                </button>
+                <form>
+                    <input
+                        name="inputTitleValue"
+                        onChange={e => this.handleInputChange(e)}
+                        type="text"
+                        value={inputTitleValue}
+                        placeholder="Type Title"
+                    />
+                    <input
+                        name="inputMessageValue"
+                        onChange={e => this.handleInputChange(e)}
+                        type="text"
+                        value={inputMessageValue}
+                        placeholder="Type Message"
+                    />
+                    <button
+                        onClick={() =>
+                            dispatch(this.newHotspot(inputTitleValue, inputMessageValue))
+                        }
+                        type="submit"
+                    >
+                        Add
+                    </button>
+                </form>
             </div>
         );
     };
