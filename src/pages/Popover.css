@@ -1,0 +1,33 @@
+.Popover-body {
+    background: white;
+    padding: 15px;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+}
+
+.Popover-body > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.Popover-body > div input {
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #e8e8e8;
+    color: #8e8e8e;
+}
+
+.Popover-body > div button {
+    cursor: pointer;
+    background: #4fc3c9;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 25px;
+    font-size: 15px;
+    border: 0;
+    margin: 5px;
+}
+
+.Popover-tipShape {
+    fill: #9a9a9a;
+}

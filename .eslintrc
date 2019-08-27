@@ -19,6 +19,7 @@
         "indent": ["error", 4, { "SwitchCase": 1 }],
         "import/extensions": "off",
         "import/no-duplicates": "off",
+        "react/prop-types": "off",
         "import/order": "off",
         "import/no-self-import": "off",
         "import/no-cycle": "off",
