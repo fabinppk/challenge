@@ -1,13 +1,9 @@
 import { TOGGLE_CLICKED, SET_COORD, CAN_GET_COORDS } from '../types';
+import { loadState } from '../localStorage';
 
-const initialState = {
-    clicked: false,
-    canGetCoords: false,
-    coordx: 0,
-    coordy: 0
-};
+const initialState = loadState();
 
-export default (state = initialState, action) => {
+export default (state = initialState.globalState, action) => {
     switch (action.type) {
         case TOGGLE_CLICKED:
             return { ...state, clicked: !state.clicked };
