@@ -67,7 +67,12 @@ class Main extends Component {
                                             top: `${hotspot.coordy}px`,
                                             left: `${hotspot.coordx}px`
                                         }}
-                                    />
+                                    >
+                                        <div className="message-container">
+                                            <p className="title">{hotspot.title}</p>
+                                            <p className="message">{hotspot.message}</p>
+                                        </div>
+                                    </div>
                                 </li>
                             );
                         })}

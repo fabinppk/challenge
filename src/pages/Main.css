@@ -59,3 +59,30 @@
     background: rgba(255, 0, 0, 0.64);
     position: fixed;
 }
+
+.ball .message-container {
+    width: 255px;
+    background: white;
+    padding: 15px;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    position: relative;
+    top: 30px;
+    left: 50%;
+    display: none;
+    transform: translateX(-50%);
+}
+
+.ball:hover .message-container {
+    display: block;
+}
+
+.ball .message-container .title {
+    color: #404040;
+}
+
+.ball .message-container .message {
+    font-size: 14px;
+    margin-top: 15px;
+    line-height: 21px;
+}
