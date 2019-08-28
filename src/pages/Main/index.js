@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './Main.css';
+import './index.css';
 import { connect } from 'react-redux';
-import WrapperPopover from './Popover';
+import WrapperPopover from '../Popover';
 
 class Main extends Component {
     constructor() {

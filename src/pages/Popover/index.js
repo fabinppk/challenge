@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './Popover.css';
 import { connect } from 'react-redux';
 import Popover from 'react-popover';
+import './index.css';
 
 class WrapperPopover extends Component {
     constructor(props) {
@@ -26,9 +26,10 @@ class WrapperPopover extends Component {
     };
 
     newHotspot = (title, message) => {
+        const { x, y } = this.props;
         const hotspot = {
-            coordx: this.props.x,
-            coordy: this.props.y,
+            coordx: x,
+            coordy: y,
             message,
             title
         };
@@ -85,11 +86,12 @@ class WrapperPopover extends Component {
 
     render() {
         const { children, isOpen } = this.props;
+        const { preferPlace, place } = this.state;
 
         const popoverProps = {
             isOpen,
-            preferPlace: this.state.preferPlace,
-            place: this.state.place,
+            preferPlace,
+            place,
             onOuterAction: () => this.togglePopover(),
             body: [this.popoverBody()]
         };

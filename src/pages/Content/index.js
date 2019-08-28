@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Main from './Main';
-import Header from './Header';
-import './Content.css';
+import Main from '../Main';
+import Header from '../Header';
+import './index.css';
 
 class Content extends Component {
     onMouseMove(e) {
